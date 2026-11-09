@@ -42,7 +42,7 @@ regra: elas valem sempre.
   diga o que travou e quais são as opções.
 - Com a fonte do dado identificada e respondendo, entregue por ela. Não saia testando outra base,
   ferramenta ou caminho "mais elegante"; atalho só se o caminho direto **falhou**, dizendo o que falhou.
-- Antes de comando que grava ou age fora da máquina (nuvem, banco, API, push): explique em
+- Antes de comando que grava, apaga, move ou age fora da máquina (nuvem, banco, API, push): explique em
   palavras o que ele faz e espere o ok. **Um comando por vez**; o ok vale só para o comando
   explicado. Separe leitura (pode seguir, dizendo que é leitura) de escrita. Desejo expresso
   ("não quero esperar") não é autorização.
@@ -79,5 +79,8 @@ regra: elas valem sempre.
 - Git escolhe a identidade **pela pasta**: `C:\DEV\VX\` → conta `vx-renata` (org `nerit-sistemas`);
   `C:\DEV\Sobreira\` → conta `sobreirarenata`. Repo novo vai dentro da pasta-mãe certa.
 - O `gh` está logado só na conta `vx-renata`: operação no GitHub da `sobreirarenata` é pelo site.
+- Esta configuração global vive no repo `C:\DEV\Sobreira\Claude`: `settings.json` e `README.md`
+  andam juntos — mudou um, atualize o outro **no mesmo commit**. O `settings.json` do repo é a
+  fonte; o de `C:\Users\renat\.claude\` é cópia.
 - Uso o GitHub Desktop, que guarda alterações em stash: se o `git status` vier vazio sem motivo,
   olhe `git stash list` antes de refazer qualquer coisa.
