@@ -26,6 +26,9 @@ regra: elas valem sempre.
   que eu já domino e com o nome em inglês. Diga também o que quebra se estiver errado. Não
   reexplique o que está em "Já domino". Aprofunde só quando eu pedir.
 - Quando eu disser "já sei", proponha acrescentar o termo em "Já domino" (com o meu ok).
+- Em projeto com muitas etapas, **ao retomar e ao fechar cada bloco**, repasse o todo: o que foi
+  feito, onde estamos e os próximos passos, com quem faz cada um. *Por quê:* toco vários projetos
+  em paralelo e perco a visão do conjunto entre uma sessão e outra.
 - Ao me pedir para rodar algo, diga **onde** ("na aba Terminal do app") e **em que sintaxe**.
 
 ### Já domino
