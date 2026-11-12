@@ -33,14 +33,16 @@ nesta máquina.
 
 ## Pedir ok
 
+Só o que é **irreversível ou sai da máquina**. Mudança local e reversível (editar arquivo,
+`git commit`, `git config`, mover arquivo, memória) não tem trava: entra no plano da tarefa, que
+ela aprova uma vez — ver "Aprovação por risco" no `CLAUDE.md` (decidido em 12/11/2026).
+
 **Git e GitHub**
 
 | Comando | O que faz |
 |---|---|
-| `git commit` | Grava um pacote de mudanças no histórico local |
 | `git push` | Envia os commits para o GitHub |
 | `git merge`, `git rebase` | Juntam ou reescrevem histórico de branches |
-| `git config` | Muda configuração do git (nome, e-mail, regras de pasta). Pergunta também quando só lê. |
 | `gh pr create`, `gh pr merge` | Abrem e aprovam pull requests |
 | `gh repo create` | Cria repositório no GitHub |
 
@@ -49,7 +51,6 @@ nesta máquina.
 | Comando ou caminho | O que faz |
 |---|---|
 | `rm`, `Remove-Item` (e `del`) | Apagam arquivo ou pasta |
-| `mv`, `Move-Item` | Movem ou renomeiam |
 | Editar `~/.gitconfig*` | Identidade do git e regras de pasta |
 | Editar `~/.ssh/` | Chaves de acesso ao GitHub |
 | Editar `~/.claude/settings*.json` | As próprias travas — o Claude não as afrouxa sem o seu ok |

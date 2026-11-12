@@ -42,13 +42,17 @@ regra: elas valem sempre.
   diga o que travou e quais são as opções.
 - Com a fonte do dado identificada e respondendo, entregue por ela. Não saia testando outra base,
   ferramenta ou caminho "mais elegante"; atalho só se o caminho direto **falhou**, dizendo o que falhou.
-- Antes de comando que grava, apaga, move ou age fora da máquina (nuvem, banco, API, push): explique em
-  palavras o que ele faz e espere o ok. **Um comando por vez**; o ok vale só para o comando
-  explicado. Separe leitura (pode seguir, dizendo que é leitura) de escrita. Desejo expresso
-  ("não quero esperar") não é autorização.
-- Pergunte antes de **começar a mexer em documentação** (uma pergunta por tarefa, dizendo quais
-  arquivos), antes do **commit** e antes do **push** — separadamente; aprovar um não aprova o
-  seguinte. Commit e push também têm trava no `settings.json`.
+- **Aprovação por risco, não por comando:**
+  - **Leitura** (consultar, listar, `git status`): pode seguir, dizendo que é leitura.
+  - **Mudança local e reversível** (editar arquivo e documentação, commit, mover, memória): antes
+    de começar, mostre o **plano inteiro da tarefa** — cada passo em palavras, com os arquivos — e
+    espere **um** ok. Depois execute tudo. Se algo sair do plano ou der erro, pare e me diga.
+  - **Irreversível ou para fora da máquina** (push, merge, apagar, nuvem, banco com escrita, API,
+    instalar programa): **um por um**, explicado em palavras, com ok para cada; o ok vale só para
+    o que foi explicado. Esses têm trava no `settings.json`.
+  - Desejo expresso ("não quero esperar") não é autorização.
+  *Por quê:* os "não" que dei foram para comandos que não tinham sido explicados; o plano explicado
+  resolve isso sem um ok por comando, e o que é arriscado de verdade continua passando por mim.
 - Antes de propor mudança de processo ou fluxo, liste como ele fica no fim: todo passo manual,
   aprovação e permissão que continua existindo. *Por quê:* decido se vale a pena pela soma dos
   passos que sobram.
