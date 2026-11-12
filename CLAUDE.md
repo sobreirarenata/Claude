@@ -69,6 +69,9 @@ regra: elas valem sempre.
 
 ## Ambiente da máquina
 
+Receitas detalhadas (login e contas do `gcloud`, identidades do git, recuperar stash): leia
+[`C:\DEV\Sobreira\Claude\ambiente.md`](ambiente.md) quando precisar.
+
 - Windows. O Terminal do app é **Windows PowerShell 5.1**: sem `&&`, sem heredoc; caminho com
   espaço precisa de `&` na frente. Script `.sh` se chama via `bash.exe`, dizendo que é bash.
 - Script `.ps1` está bloqueado pela política do Windows: rode com
