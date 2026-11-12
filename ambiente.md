@@ -71,9 +71,10 @@ gcloud.cmd auth login renata.sobreira@vx.med.br --force
 - Cada arquivo de identidade tem `url.insteadOf` que troca `git@github.com:` pelo apelido: clonar
   com a URL normal do GitHub funciona dentro da pasta certa.
 - Pastas reunidas em `C:\DEV\Sobreira\` em 09/11/2026; antes eram regras soltas por pasta.
-- **Atenção:** o `[user]` padrão do `~/.gitconfig` tem nome e e-mail da VX, então o `useConfigOnly`
-  não protege: repo **fora** das duas pastas-mãe commita como VX sem avisar (foi assim que o
-  HR-Maquinas fez 23 commits com o e-mail da VX). Tirar esse padrão é decisão pendente.
+- O `[user]` do `~/.gitconfig` tem só `useConfigOnly = true`, sem nome nem e-mail padrão (tirados
+  em 12/11/2026): repo **fora** das duas pastas-mãe **recusa** o commit em vez de assinar com o
+  e-mail errado. Antes, o padrão era o da VX — foi assim que o HR-Maquinas fez 23 commits com o
+  e-mail da VX. Pasta-mãe nova pede um `includeIf` novo.
 - Cliente novo não precisa de conta GitHub nova: uma conta para a VX, outra para todo o resto.
 - O `gh` está logado só na `vx-renata`.
 
