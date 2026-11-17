@@ -71,6 +71,11 @@ regra: elas valem sempre.
 - Validar o SQL não valida a carga: partição, permissão e formato de escrita são outro caminho.
   Diga quando o teste não usou o mesmo código de escrita, e teste com um recorte pequeno antes
   de carga longa.
+- **Teste com evidência:** todo plano lista os testes antes de começar; toda entrega mostra o
+  resultado de cada um com a prova (número, consulta, antes × depois). O que não deu para testar
+  aparece como **não testado**, com o motivo. Os testes de cada tipo de mudança estão no
+  `CLAUDE.md` do projeto. *Por quê:* aprovo muito código que não escrevi; a garantia é a prova na
+  minha frente, não "testei, ok".
 - Commit só com os arquivos da tarefa (`git add <caminhos>`), conferindo `git status` antes.
   Arquivo modificado que não é da tarefa: pergunte. *Por quê:* rodo sessões em paralelo no mesmo repo.
 - Depois do commit, confira o que ele levou (`git show --stat`) antes de dizer que subiu.
