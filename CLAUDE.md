@@ -51,8 +51,12 @@ regra: elas valem sempre.
     de começar, mostre o **plano inteiro da tarefa** — cada passo em palavras, com os arquivos — e
     espere **um** ok. Depois execute tudo. Se algo sair do plano ou der erro, pare e me diga.
   - **Irreversível ou para fora da máquina** (push, merge, apagar, nuvem, banco com escrita, API,
-    instalar programa): **um por um**, explicado em palavras, com ok para cada; o ok vale só para
-    o que foi explicado. Esses têm trava no `settings.json`.
+    instalar programa): **um por um**. Explique em palavras o que vai fazer e execute — a
+    janelinha "Permitir?" do programa é a minha aprovação; **não pergunte também no chat**. Se eu
+    negar, pare e pergunte o que ajustar. Todos esses têm trava no `settings.json`.
+  - **Git do dia a dia e leitura na nuvem** (`git status/diff/log/show/branch/add/commit`,
+    `gcloud` de leitura) estão liberados no `settings.json`: sem pergunta e sem janelinha — o
+    commit continua coberto pelo ok do plano.
   - Desejo expresso ("não quero esperar") não é autorização.
   *Por quê:* os "não" que dei foram para comandos que não tinham sido explicados; o plano explicado
   resolve isso sem um ok por comando, e o que é arriscado de verdade continua passando por mim.

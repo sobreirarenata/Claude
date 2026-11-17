@@ -3,6 +3,32 @@
     "CLAUDE_CODE_USE_POWERSHELL_TOOL": "1"
   },
   "permissions": {
+    "allow": [
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git show*)",
+      "Bash(git branch*)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(*gcloud* * list*)",
+      "Bash(*gcloud* * describe *)",
+      "Bash(*gcloud* logging read *)",
+      "Bash(*gcloud* config list*)",
+      "Bash(*gcloud* auth print-access-token*)",
+      "PowerShell(git status*)",
+      "PowerShell(git diff*)",
+      "PowerShell(git log*)",
+      "PowerShell(git show*)",
+      "PowerShell(git branch*)",
+      "PowerShell(git add *)",
+      "PowerShell(git commit *)",
+      "PowerShell(*gcloud* * list*)",
+      "PowerShell(*gcloud* * describe *)",
+      "PowerShell(*gcloud* logging read *)",
+      "PowerShell(*gcloud* config list*)",
+      "PowerShell(*gcloud* auth print-access-token*)"
+    ],
     "deny": [
       "Bash(git add -A)",
       "Bash(git add -A *)",

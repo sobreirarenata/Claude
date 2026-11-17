@@ -20,6 +20,25 @@ nesta máquina.
 - **Não é cofre**: a trava pega o jeito comum de escrever o comando. Um comando escrito de outra
   forma (ex.: `git -C pasta push`) pode passar. Por isso a regra também está em texto no `CLAUDE.md`.
 
+## Liberado (sem janelinha)
+
+Comandos do dia a dia, locais ou só de leitura. Sem esta lista, sessões no modo de permissão
+**padrão** abrem janelinha para tudo. O proibido e o pedir ok continuam vencendo: `git add -A`
+segue bloqueado mesmo com `git add` liberado (decidido em 17/11/2026).
+
+| Comando | Por que está liberado |
+|---|---|
+| `git status`, `git diff`, `git log`, `git show`, `git branch` | Só leitura |
+| `git add <arquivo>`, `git commit` | Local e reversível; coberto pelo ok do plano da tarefa |
+| `gcloud ... list / describe`, `gcloud logging read`, `gcloud config list`, `gcloud auth print-access-token` | Só leitura no GCP |
+
+Leitura **pela API** (`curl`, `Invoke-RestMethod`) **não** está liberada: algumas leituras usam o
+mesmo formato das escritas (a leitura de log e o disparo do Dataform são ambos POST), então não dá
+para separar com segurança.
+
+No que pede ok, a janelinha **é** a aprovação: o Claude explica no chat e executa, sem perguntar
+duas vezes.
+
 ## Proibido
 
 | Comando | O que faz | Exemplo do risco |
