@@ -30,6 +30,7 @@ segue bloqueado mesmo com `git add` liberado (decidido em 17/11/2026).
 |---|---|
 | `git status`, `git diff`, `git log`, `git show`, `git branch` | Só leitura |
 | `git add <arquivo>`, `git commit` | Local e reversível; coberto pelo ok do plano da tarefa |
+| `git fetch`, `git pull` | Só trazem o que está no GitHub para a máquina; nada sai dela (decidido em 17/11/2026) |
 | `gcloud ... list / describe`, `gcloud logging read`, `gcloud config list`, `gcloud auth print-access-token` | Só leitura no GCP |
 
 Leitura **pela API** (`curl`, `Invoke-RestMethod`) **não** está liberada: algumas leituras usam o
