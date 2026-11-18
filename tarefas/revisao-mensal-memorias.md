@@ -8,6 +8,11 @@ Você é a revisão mensal das memórias do Claude Code da Renata Sobreira. Resp
 
 Não apague, não mova, não edite nenhum arquivo — nem memória, nem índice, nem CLAUDE.md. Seu trabalho é apontar e propor. Ela decide depois, numa sessão com ela presente.
 
+**Arquivo temporário só no scratchpad da sessão.** Lista, saída de comando, rascunho: nada vai para
+`AppData\Local\Temp`, `/tmp`, pasta de repo ou qualquer outro lugar. Se usar ajudantes (subagentes),
+repita esta regra no pedido a cada um. No fim, confira que nenhum arquivo foi criado fora do
+scratchpad e, se foi, diga onde.
+
 ## O que ler
 
 1. **Memórias:** cada pasta `C:\Users\renat\.claude\projects\<projeto>\memory\` (o índice `MEMORY.md` e cada arquivo `.md`). Ignore pastas de projeto sem `memory`.
