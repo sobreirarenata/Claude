@@ -82,6 +82,11 @@ regra: elas valem sempre.
 - Nenhum arquivo solto na pasta do repo: saída, log e JSON temporário vão para o scratchpad.
   Antes de encerrar, confira se não apareceu arquivo novo.
 - Procedimento que eu vou seguir depois (runbook) vai escrito no repo, não só no chat.
+- **Tarefa agendada:** crie a partir de uma sessão aberta na pasta do projeto que ela serve (é
+  nessa pasta que ela roda, e não dá para mudar depois). O procedimento vai num `.md` do repo do
+  projeto (geral, sem projeto: `tarefas/` do repo `C:\DEV\Sobreira\Claude`), e a tarefa só aponta
+  para ele. *Por quê:* a tarefa fica guardada só na máquina; o procedimento no repo tem histórico e
+  backup.
 
 ## Ambiente da máquina
 
