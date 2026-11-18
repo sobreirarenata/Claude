@@ -125,7 +125,11 @@
       "Edit(//c/Users/renat/.claude/settings*.json)",
       "Edit(//c/Users/renat/.claude/CLAUDE.md)",
       "mcp__16df193e-febc-476c-92b9-796765b017bd__execute_sql",
-      "mcp__16df193e-febc-476c-92b9-796765b017bd__cancel_job"
+      "mcp__16df193e-febc-476c-92b9-796765b017bd__cancel_job",
+      "mcp__claude-in-chrome__navigate",
+      "mcp__Claude_Browser__navigate",
+      "mcp__Claude_Browser__preview_start",
+      "WebFetch"
     ]
   }
 }

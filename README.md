@@ -92,6 +92,18 @@ As memórias do Claude (`~/.claude/projects/.../memory`) ficam **livres**, guiad
 O `gcloud` de leitura (`list`, `describe`, `logging read`) e a ferramenta `execute_sql_readonly`
 do BigQuery seguem livres.
 
+**Navegador e sites**
+
+| Ferramenta | O que faz |
+|---|---|
+| `mcp__claude-in-chrome__navigate` | Abre um site no seu Chrome |
+| `mcp__Claude_Browser__navigate`, `mcp__Claude_Browser__preview_start` | Abrem um site no navegador do app |
+| `WebFetch` | Lê uma página da internet sem abrir janela |
+
+Pergunta para **abrir** o site; clicar dentro de um site já liberado não pergunta de novo. Página
+publicada pelo próprio Claude, que o app abre sozinho, não passa por estas ferramentas e não tem
+trava (decidido em 18/11/2026).
+
 **Instalar programa**
 
 | Comando | O que faz |
