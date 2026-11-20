@@ -7,6 +7,7 @@ nesta máquina.
 |---|---|---|
 | `CLAUDE.md` | Instruções de comportamento (texto que o Claude lê e procura seguir) | `C:\Users\renat\.claude\CLAUDE.md` tem só uma linha que importa este arquivo |
 | `settings.json` | Travas (o próprio Claude Code aplica, independe do Claude lembrar) | **Cópia** em `C:\Users\renat\.claude\settings.json` — mudou aqui, copiar de novo |
+| `hooks/trava-drive.ps1` | Script da trava do Drive `H:\` (ver seção abaixo) | Chamado direto daqui pelo `settings.json`; não precisa copiar |
 
 ## Como as travas funcionam
 
@@ -109,6 +110,35 @@ trava (decidido em 18/11/2026).
 | Comando | O que faz |
 |---|---|
 | `npm install`, `pip install`, `winget` | Instalam programas e bibliotecas |
+
+## Trava do Drive `H:\` (só leitura em 5 pastas)
+
+Decidido em 20/11/2026, para a conferência semanal de pagamentos do HR. O Claude só pode **ler**
+estas pastas, com as subpastas:
+
+- `H:\Drives compartilhados\Administrativo\1 - GAR\Financeiro\Borderô pagamentos` (inclui GAR-Ipe)
+- `H:\Drives compartilhados\Administrativo\2 - HR\Financeiro\Borderô pagamentos`
+- `H:\Drives compartilhados\Administrativo\3 - GB Agro\Financeiro\Borderô pagamentos`
+- `H:\Drives compartilhados\Administrativo\4 - DGB Ipe\Financeiro\Borderô pagamentos`
+- `H:\Drives compartilhados\Administrativo\5 - BAR\Financeiro\Borderô pagamentos`
+
+Duas camadas:
+
+| Camada | O que faz |
+|---|---|
+| `deny` `Edit(//h/**)` | Bloqueia as ferramentas de editar e criar arquivo em todo o `H:\` |
+| Hook `hooks/trava-drive.ps1` | Script que roda **antes** de cada leitura, busca, edição ou comando de terminal. Bloqueia: (1) qualquer caminho do `H:\` fora das 5 pastas; (2) editar ou criar arquivo no `H:\`; (3) comando de terminal que cite o `H:\` e mova, copie, renomeie, apague, crie ou grave algo (inclusive `>`) |
+
+Limites (não é cofre):
+
+- Comando montado de forma indireta (caminho dentro de variável, juntado em pedaços) pode passar.
+  Por isso a regra também vai em texto na skill da conferência.
+- Um script rodado pelo Claude é visto só pelo comando que o dispara, não pelo que faz por dentro:
+  o código da conferência abre os arquivos apenas para leitura.
+- Também bloqueia leitura com redirecionamento (`2>`) que cite o `H:\` — efeito colateral aceito.
+- Cada ferramenta passa pelo script (~0,5 s a mais por ação).
+- Mudou o nome de uma pasta: ajustar a lista `$liberadas` no script e esta seção.
+- O hook passa a valer em **sessão nova** do Claude Code.
 
 ## Manutenção
 

@@ -61,7 +61,8 @@
       "PowerShell(git push * -f*)",
       "PowerShell(git reset --hard*)",
       "PowerShell(git clean *)",
-      "PowerShell(Set-ExecutionPolicy*)"
+      "PowerShell(Set-ExecutionPolicy*)",
+      "Edit(//h/**)"
     ],
     "ask": [
       "Bash(git push)",
@@ -130,6 +131,19 @@
       "mcp__Claude_Browser__navigate",
       "mcp__Claude_Browser__preview_start",
       "WebFetch"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Glob|Grep|Edit|MultiEdit|Write|NotebookEdit|Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:/DEV/Sobreira/Claude/hooks/trava-drive.ps1\""
+          }
+        ]
+      }
     ]
   }
 }
