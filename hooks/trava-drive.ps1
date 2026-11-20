@@ -20,10 +20,16 @@ try {
     $evento = $raw | ConvertFrom-Json
     $ferramenta = [string]$evento.tool_name
 
-    # Junta todos os textos da entrada da ferramenta (caminho, padrao, comando...)
+    # Junta os textos da entrada da ferramenta (caminho, padrao, comando...).
+    # Nas ferramentas de escrita, so o caminho do arquivo importa: o conteudo pode citar o H:
+    # (ex.: um script que le o Drive) sem que isso seja gravar no Drive.
     $partes = @()
     if ($evento.tool_input) {
-        foreach ($p in $evento.tool_input.PSObject.Properties) {
+        $campos = $evento.tool_input.PSObject.Properties
+        if ($ferramenta -match '^(Edit|MultiEdit|Write|NotebookEdit)$') {
+            $campos = $campos | Where-Object { $_.Name -in 'file_path', 'notebook_path', 'path' }
+        }
+        foreach ($p in $campos) {
             if ($p.Value -is [string]) { $partes += $p.Value }
             elseif ($p.Value) { $partes += ($p.Value | ConvertTo-Json -Depth 10 -Compress) }
         }
