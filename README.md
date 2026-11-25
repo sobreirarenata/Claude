@@ -34,6 +34,7 @@ segue bloqueado mesmo com `git add` liberado (decidido em 17/11/2026).
 | `git fetch`, `git pull` | Só trazem o que está no GitHub para a máquina; nada sai dela (decidido em 17/11/2026) |
 | `gcloud ... list / describe`, `gcloud logging read`, `gcloud config list`, `gcloud auth print-access-token` | Só leitura no GCP |
 | `powershell -ExecutionPolicy Bypass -File C:\DEV\VX\big-query-vx\ops\dataform-status.ps1` | Script que só lê o status do Dataform (só GET), para a checagem diária agendada rodar sem janelinha. Liberado pelo caminho: mudança no script passa por plano e commit e ele deve continuar só com GET (decidido em 24/11/2026) |
+| `powershell -ExecutionPolicy Bypass -File C:\DEV\VX\big-query-vx\ops\auditoria-consulta-c.ps1` | Script que roda só a consulta (c) da auditoria de uso do BigQuery, copiada do runbook, e recusa comando de escrita, para a checagem mensal agendada rodar sem janelinha. Liberado pelo caminho: mudança no script passa por plano e commit (decidido em 25/11/2026) |
 
 Leitura **pela API** (`curl`, `Invoke-RestMethod`) **não** está liberada: algumas leituras usam o
 mesmo formato das escritas (a leitura de log e o disparo do Dataform são ambos POST), então não dá
