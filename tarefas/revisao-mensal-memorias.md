@@ -41,3 +41,19 @@ Se houver, quatro seções na ordem acima, só as que tiverem itens. Em cada uma
 | Projeto | Arquivo | O que é | Proposta |
 
 Proposta é concreta: "apagar", "mover para `C:\DEV\VX\big-query-vx\docs\padroes.md` seção X", "atualizar a linha do índice para ...". Feche com o total por tipo e com o que não deu para conferir (ex.: repo que não existe mais na máquina).
+
+## Aviso no Google Chat
+
+Ao terminar, **sempre** — inclusive quando parar por erro ou não achar nada —, mande um resumo para
+o espaço pessoal da Renata no Google Chat. A resposta completa (com as tabelas) continua na sessão.
+
+1. Grave o resumo num arquivo `.txt` no scratchpad da sessão (UTF-8), no formato do Chat:
+   `*negrito*` com um asterisco, bullet com o caractere `•`, **sem tabela**. Conteúdo:
+   - primeira linha: `*Revisão mensal das memórias — <data>*`;
+   - o total por tipo (ou "Memórias em ordem", ou o erro que fez parar);
+   - até 5 itens principais, um por linha: `• <projeto> / <arquivo>: <proposta>`;
+   - última linha: "Detalhe completo na sessão da tarefa no app do Claude."
+2. Rode exatamente:
+   `powershell -ExecutionPolicy Bypass -File C:\DEV\Sobreira\Claude\scripts\enviar-chat.ps1 -Arquivo <caminho-do-txt>`
+3. Se a saída começar com "NAO ENVIADO", diga isso na resposta final, com o motivo. Não reenvie
+   (duplica a mensagem) e não tente outro caminho.

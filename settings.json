@@ -33,7 +33,8 @@
       "PowerShell(*gcloud* config list*)",
       "PowerShell(*gcloud* auth print-access-token*)",
       "PowerShell(powershell -ExecutionPolicy Bypass -File C:\\DEV\\VX\\big-query-vx\\ops\\dataform-status.ps1*)",
-      "PowerShell(powershell -ExecutionPolicy Bypass -File C:\\DEV\\VX\\big-query-vx\\ops\\auditoria-consulta-c.ps1*)"
+      "PowerShell(powershell -ExecutionPolicy Bypass -File C:\\DEV\\VX\\big-query-vx\\ops\\auditoria-consulta-c.ps1*)",
+      "PowerShell(powershell -ExecutionPolicy Bypass -File C:\\DEV\\Sobreira\\Claude\\scripts\\enviar-chat.ps1*)"
     ],
     "deny": [
       "Bash(git add -A)",
